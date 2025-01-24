@@ -75,32 +75,57 @@ main ul li, main ol li {
     margin: 5px 0;
 }
 
-main #album #photo img{
-    width: 400px;
+#photo {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 100;
+    margin: 0;
 }
 
-#album {
-    list-style-type: none; /* Remove default bullets */
-    display: flex; /* Display items in a row */
-    flex-wrap: wrap; /* Wrap to the next line if needed */
-    gap: 10px; /* Add spacing between images */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+#photo li {
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
 }
 
-/* Style for each list item */
-#album li {
-    margin: 5px; /* Optional: Add extra spacing */
+#photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #fdfbfb;
+    border-radius: 5px;
 }
 
-/* Style for the images */
-.photo {
-    width: 150px; /* Set a specific width */
-    height: 150px; /* Set a specific height */
-    object-fit: cover; /* Ensure images fit within the dimensions without distortion */
-    border: 2px solid #ccc; /* Optional: Add a border */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    display: block;
+.caption {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    bottom:5 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: rgba(254, 249, 249, 0.7);
+    color: #272424;
+    font-size: 0.9em;
+    padding: 1px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#photo li:hover .description {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Table styling */
