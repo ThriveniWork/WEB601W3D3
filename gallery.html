@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Pet Gallery</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+    <body>
+        <div id = "container">
+            <header  style="font-size: 60px; color: #fff">My Web site brand</header>
+            <!-- Begin Navigation--->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="adoption_info.html">Adoption Info</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="registration.html">Pet Registration</a></li>
+                </ul>
+            </nav>
+            <!--End  Main Navigation  -->
+            <main>
+                <h1>My Pet Gallery</h1>
+                <ul id = "album">
+                    <!--Images will be displayed here-->
+                    <img src="images/picture1.jpeg" alt = "Picture 1" class="photo">
+                    <img src="images/picture2.jpeg" alt = "Picture 2" class="photo">
+                    <img src="images/picture3.jpeg" alt = "Picture 3" class="photo"> 
+                    <img src="images/picture4.jpeg" alt = "Picture 4" class="photo">
+                    <img src="images/picture5.jpeg" alt = "Picture 5" class="photo">
+                    <img src="images/picture6.jpeg" alt = "Picture 6" class="photo">
+                    <img src="images/picture7.jpeg" alt = "Picture 7" class="photo">
+                    <img src="images/picture8.jpeg" alt = "Picture 8" class="photo">
+                    <img src="images/picture9.jpeg" alt = "Picture 9" class="photo">
+                    <img src="images/picture10.jpeg" alt = "Picture 10" class="photo">
+                </ul>
+            </main>
+        </div>
+    <footer>&copy; Copyright 2025</footer>
+
+    <script>
+        var photos = []; //Declared an empty variable
+        var fileNames = []; //Declared an empty element
+        var imageList = []; //Declared an empty array
+        var image = []; //Declared an empty variable for the list codes
+        var openList = "<li id = 'photo'>"; //Declared variable for open tag for list
+        var closeList = "</li>"; //Declared variable for close tag for list
+
+        //Created a for loop for the images
+        for(var i=0; i<10; i++){
+            fileNames.push("picture"+(i+1)); //create image filename and store in array
+            photos.push("<img src = 'images/"+fileNames[i]+".jpeg'>"); //Assemble file name for photos and store in an array
+            image = openList + photos[i] + closeList; //Assemble the image elements
+            imageList.push(image); //Store the assembled code into the array
+        }
+
+        //Display the six images
+        document.getElementById("album").innerHTML = imageList;
+    </script>
+    </body>
+ </html>
+ 

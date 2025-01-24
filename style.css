@@ -75,6 +75,34 @@ main ul li, main ol li {
     margin: 5px 0;
 }
 
+main #album #photo img{
+    width: 400px;
+}
+
+#album {
+    list-style-type: none; /* Remove default bullets */
+    display: flex; /* Display items in a row */
+    flex-wrap: wrap; /* Wrap to the next line if needed */
+    gap: 10px; /* Add spacing between images */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for each list item */
+#album li {
+    margin: 5px; /* Optional: Add extra spacing */
+}
+
+/* Style for the images */
+.photo {
+    width: 150px; /* Set a specific width */
+    height: 150px; /* Set a specific height */
+    object-fit: cover; /* Ensure images fit within the dimensions without distortion */
+    border: 2px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    display: block;
+}
+
 /* Table styling */
 table {
     width: 100%;
